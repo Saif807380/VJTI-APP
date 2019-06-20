@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (!new PrefManager(this).isUserLogedOut()) {
             //user's email and password both are saved in preferences
-            startProfileActivity();
+            Home();
         }
 
 
@@ -86,6 +86,19 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.this,"Only VJTI domain email IDs allowed!",Toast.LENGTH_LONG
             ).show();
         }
+    }
+
+
+    private void ThankYou(){
+        Intent intent1 = new Intent(this,Homescreen.class);
+        startActivity(intent1);
+        finish();
+    }
+
+    private void Home(){
+        Intent intent2 = new Intent(this,Homescreen.class);
+        startActivity(intent2);
+        finish();
     }
 
 }

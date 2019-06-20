@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/android.support.v7.widget.GridLayout"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="#00D31111"
+    app:columnCount="2"
+    app:rowCount="3"
+    app:useDefaultMargins="true">
+
+    <Button
+        android:id="@+id/academics"
+        android:layout_width="108dp"
+        android:background="@drawable/shape5"
+        android:padding="3dp"
+        android:text="@string/academics"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="0"
+        grid:layout_rowWeight="1" />
+
+    <Button
+        android:id="@+id/events"
+        android:layout_width="108dp"
+        android:background="@drawable/shape5"
+        android:text="@string/events"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        grid:layout_column="1"
+        grid:layout_columnWeight="1"
+        grid:layout_row="0"
+        grid:layout_rowWeight="1" />
+
+    <Button
+        android:id="@+id/map"
+        android:layout_width="108dp"
+        android:background="@drawable/shape5"
+        android:text="@string/map"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="1"
+        grid:layout_rowWeight="1" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="108dp"
+        android:background="@drawable/shape5"
+        android:text="@string/exit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        grid:layout_column="1"
+        grid:layout_columnWeight="1"
+        grid:layout_row="1"
+        grid:layout_rowWeight="1" />
+</android.support.v7.widget.GridLayout>
