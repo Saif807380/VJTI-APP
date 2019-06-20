@@ -2,17 +2,12 @@ package com.example.vjtiapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.util.Log;
 import android.widget.CheckBox;
 import android.widget.Toast;
-import static android.Manifest.permission.READ_CONTACTS;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,12 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
         email = findViewById(R.id.emailEditText);
         password = findViewById(R.id.passEditText);
-
-        createButton = findViewById(R.id.createButton1);
+        createButton = findViewById(R.id.next);
 
         if (!new PrefManager(this).isUserLogedOut()) {
             //user's email and password both are saved in preferences
-            startHomeActivity();
+            startProfileActivity();
         }
 
 
@@ -56,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void startHomeActivity() {
-        Intent intent = new Intent(this, ThankYou.class);
+    private void startProfileActivity() {
+        Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
         finish();
     }
@@ -77,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     saveLoginDetails(user_email,user_pass);
 
                 }
-                startHomeActivity();
+                startProfileActivity();
             }
             else
             {
