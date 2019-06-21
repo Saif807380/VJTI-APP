@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/android.support.v7.widget.GridLayout"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="3dp"
+    android:background="#00D31111"
+    app:columnCount="1"
+    app:rowCount="4"
+    app:useDefaultMargins="true">
+
+    <ImageButton
+        android:id="@+id/location"
+        android:layout_height="95dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/round"
+        android:padding="3dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/location"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="0"
+        grid:layout_rowWeight="1" />
+
+    <TextView
+        android:id="@+id/campus_location"
+        android:gravity="center"
+        android:text="@string/campus_location"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="1"
+        grid:layout_rowWeight="0" />
+
+    <ImageButton
+        android:id="@+id/campus_map"
+        android:layout_height="95dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/round"
+        android:padding="3dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/campus"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="2"
+        grid:layout_rowWeight="1" />
+
+    <TextView
+        android:id="@+id/campusMap"
+        android:gravity="center"
+        android:text="@string/campus_map"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="4"
+        grid:layout_rowWeight="0" />
+</android.support.v7.widget.GridLayout>

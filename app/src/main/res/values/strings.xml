@@ -25,10 +25,20 @@
     <string name="branch">Branch</string>
     <string name="year">Year</string>
     <string name="go_to_home">Go To Home</string>
+    <string name="coc">coc</string>
+    <string name="techno">techno</string>
+    <string name="prati">prati</string>
+    <string name="enthu">enthu</string>
+    <string name="community_of_coders">Community \nOf Coders</string>
+    <string name="pratibimb">Pratibimb</string>
+    <string name="technovanza">Technovanza</string>
+    <string name="enthusia">Enthusia</string>
     <string name="academics">Academics</string>
     <string name="events">Events</string>
     <string name="map">Map</string>
     <string name="exit">Exit</string>
+    <string name="campus_map">Campus Map</string>
+    <string name="campus_location">Campus Location</string>
     <string-array name="branches">
         <item>Computer</item>
         <item>Electronics</item>
