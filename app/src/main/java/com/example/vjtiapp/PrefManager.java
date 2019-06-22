@@ -18,10 +18,6 @@ public class PrefManager {
         editor.commit();
     }
 
-    public String getEmail() {
-        SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
-        return sharedPreferences.getString("Email", "");
-    }
 
     public boolean isUserLogedOut() {
         SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);

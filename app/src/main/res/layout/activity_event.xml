@@ -26,9 +26,14 @@
 
     <TextView
         android:id="@+id/coc_title"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/community_of_coders"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="0"
         grid:layout_columnWeight="1"
         grid:layout_row="1"
@@ -53,9 +58,14 @@
 
     <TextView
         android:id="@+id/techno_title"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/technovanza"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="1"
         grid:layout_columnWeight="1"
         grid:layout_row="1"
@@ -79,9 +89,14 @@
 
     <TextView
         android:id="@+id/prati_title"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/pratibimb"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="0"
         grid:layout_columnWeight="1"
         grid:layout_row="3"
@@ -105,9 +120,14 @@
 
     <TextView
         android:id="@+id/enthu_title"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/enthusia"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="1"
         grid:layout_columnWeight="1"
         grid:layout_row="3"

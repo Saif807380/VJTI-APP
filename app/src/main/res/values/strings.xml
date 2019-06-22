@@ -5,9 +5,9 @@
     <string name="enter_password">Enter Password</string>
     <string name="create_account">Create Account</string>
     <string name="create_profile">Create Profile</string>
-    <string name="email">Email:</string>
+    <string name="email">Email</string>
     <string name="ThankYou">Thank You for signing up!</string>
-    <string name="password">Password:</string>
+    <string name="password">Password</string>
     <string name="remember_me">Remember Me</string>
     <string name="signedUp">Registered!</string>
     <string name="title_activity_login">Sign in</string>
@@ -29,7 +29,7 @@
     <string name="techno">techno</string>
     <string name="prati">prati</string>
     <string name="enthu">enthu</string>
-    <string name="community_of_coders">Community \nOf Coders</string>
+    <string name="community_of_coders">C.O.C</string>
     <string name="pratibimb">Pratibimb</string>
     <string name="technovanza">Technovanza</string>
     <string name="enthusia">Enthusia</string>
@@ -39,6 +39,16 @@
     <string name="exit">Exit</string>
     <string name="campus_map">Campus Map</string>
     <string name="campus_location">Campus Location</string>
+    <string name="map1">MAP</string>
+    <string name="events1">EVENTS</string>
+    <string name="profile1">PROFILE</string>
+    <string name="vjti_home">VJTI APP - HOME</string>
+    <string name="already_registerd_sign_in_here">Already Registerd? Sign In here</string>
+    <string name="user_login">User Login</string>
+    <string name="enter_email1">Enter email</string>
+    <string name="not_have_an_account_signup_here"> Do not have an account? Signup Here</string>
+    <string name="signup">Sign In</string>
+    <string name="enter_password1">Enter password</string>
     <string-array name="branches">
         <item>Computer</item>
         <item>Electronics</item>

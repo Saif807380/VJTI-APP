@@ -25,9 +25,14 @@
 
     <TextView
         android:id="@+id/campus_location"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/campus_location"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="0"
         grid:layout_columnWeight="1"
         grid:layout_row="1"
@@ -48,9 +53,14 @@
 
     <TextView
         android:id="@+id/campusMap"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/campus_map"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="0"
         grid:layout_columnWeight="1"
         grid:layout_row="4"

@@ -1,6 +1,7 @@
 package com.example.vjtiapp;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.NonNull;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -8,11 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.CheckBox;
 import android.widget.Toast;
+import android.widget.TextView;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-import java.util.HashMap;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,22 +25,23 @@ public class MainActivity extends AppCompatActivity {
     EditText password;
     public String user_email;
     public String user_pass;
-    DatabaseReference mFireBase;
     Button createButton;
+    TextView signIn;
     CheckBox checkBoxRememberMe;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mFireBase = FirebaseDatabase.getInstance().getReference();
         email = findViewById(R.id.emailEditText);
         password = findViewById(R.id.passEditText);
         createButton = findViewById(R.id.next);
-
-
+        mAuth = FirebaseAuth.getInstance();
+        signIn = findViewById(R.id.textViewSignUp);
         if (!new PrefManager(this).isUserLogedOut()) {
             //user's email and password both are saved in preferences
+            finish();
             Home();
         }
 
@@ -49,11 +54,20 @@ public class MainActivity extends AppCompatActivity {
                         user_pass = password.getText().toString();
 
                         checkBoxRememberMe = findViewById(R.id.checkBox1);
-                        mFireBase.child("Users");
+
                         login();
 
                     }});
 
+        signIn.setOnClickListener(
+                new TextView.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                        startActivity(new Intent(MainActivity.this,Login.class));
+                    }
+                }
+        );
     }
 
     private void startProfileActivity() {
@@ -77,7 +91,16 @@ public class MainActivity extends AppCompatActivity {
                     saveLoginDetails(user_email,user_pass);
 
                 }
-                AddToUsers();
+
+                mAuth.createUserWithEmailAndPassword(user_email,user_pass)
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(MainActivity.this,"Successful!",Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
                 startProfileActivity();
             }
             else
@@ -103,15 +126,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void AddToUsers(){
 
-        mFireBase = FirebaseDatabase.getInstance().getReference().child("Users");
-        HashMap<String,String> datamap = new HashMap<String,String>();
-        datamap.put("Email",user_email);
-        datamap.put("Password",user_pass);
-
-        mFireBase.push().setValue(datamap);
-    }
 
 }
 

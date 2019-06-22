@@ -26,9 +26,14 @@
 
     <TextView
         android:id="@+id/aca_title"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/academics"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="0"
         grid:layout_columnWeight="1"
         grid:layout_row="1"
@@ -53,9 +58,14 @@
 
     <TextView
         android:id="@+id/events_title"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/events"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="1"
         grid:layout_columnWeight="1"
         grid:layout_row="1"
@@ -79,9 +89,14 @@
 
     <TextView
         android:id="@+id/map_title"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/map"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="0"
         grid:layout_columnWeight="1"
         grid:layout_row="3"
@@ -105,9 +120,14 @@
 
     <TextView
         android:id="@+id/exit_title"
+        android:background="@drawable/shape5"
         android:gravity="center"
         android:text="@string/exit"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
         grid:layout_column="1"
         grid:layout_columnWeight="1"
         grid:layout_row="3"
