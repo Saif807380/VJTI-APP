@@ -2,6 +2,7 @@ package com.example.vjtiapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -11,21 +12,33 @@ import android.widget.Toast;
 import android.widget.Button;
 import android.content.Intent;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+
 
 public class Profile extends AppCompatActivity implements OnItemSelectedListener{
 
     Spinner branch,year;
     String branch_name,year_name;
     Button createprofile;
-
+    DatabaseReference mFireBase;
+    String user_name;
+    EditText name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+
         branch = (Spinner)findViewById(R.id.branch);
         year = findViewById(R.id.year);
         createprofile = findViewById(R.id.createaccount);
+        mFireBase = FirebaseDatabase.getInstance().getReference();
+        name = findViewById(R.id.pro_name);
+
 
 
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
@@ -47,7 +60,9 @@ public class Profile extends AppCompatActivity implements OnItemSelectedListener
         createprofile.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View v) {
-
+                        user_name = name.getText().toString();
+                        mFireBase.child("User's Profile");
+                            AddToUsersProfile();
                             ThankYou();
 
                     }});
@@ -127,8 +142,6 @@ public class Profile extends AppCompatActivity implements OnItemSelectedListener
 
     }
 
-
-
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         if(parent.getId()==R.id.branch)
@@ -151,6 +164,16 @@ public class Profile extends AppCompatActivity implements OnItemSelectedListener
         finish();
     }
 
+    public void AddToUsersProfile(){
+
+        mFireBase = FirebaseDatabase.getInstance().getReference().child("User's Profile");
+        HashMap<String,String> datamap = new HashMap<String,String>();
+        datamap.put("Name",user_name);
+        datamap.put("Branch",branch_name);
+        datamap.put("Year",year_name);
+
+        mFireBase.push().setValue(datamap);
+    }
 }
 
 

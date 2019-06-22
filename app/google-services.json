@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "585910958451",
+    "firebase_url": "https://vjti-app.firebaseio.com",
+    "project_id": "vjti-app",
+    "storage_bucket": "vjti-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585910958451:android:6cd24d6bf9e70889",
+        "android_client_info": {
+          "package_name": "com.example.vjtiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585910958451-fckkh5vpthhdi20m63csp29on07f6nbp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vjtiapp",
+            "certificate_hash": "a5ffb0b511df4e5653cd2973182c9e3584e4584b"
+          }
+        },
+        {
+          "client_id": "585910958451-opal7shaolhrk5qhmc4t0a0edoora37f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHhbraeHdwyJVr6iw_4VBr_fF4gZeS5VI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585910958451-opal7shaolhrk5qhmc4t0a0edoora37f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

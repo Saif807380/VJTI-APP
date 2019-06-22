@@ -9,14 +9,19 @@ import android.widget.EditText;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+
 
 public class MainActivity extends AppCompatActivity {
 
     EditText email;
     EditText password;
-    String user_email;
-    String user_pass;
-
+    public String user_email;
+    public String user_pass;
+    DatabaseReference mFireBase;
     Button createButton;
     CheckBox checkBoxRememberMe;
 
@@ -24,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mFireBase = FirebaseDatabase.getInstance().getReference();
         email = findViewById(R.id.emailEditText);
         password = findViewById(R.id.passEditText);
         createButton = findViewById(R.id.next);
+
 
         if (!new PrefManager(this).isUserLogedOut()) {
             //user's email and password both are saved in preferences
@@ -43,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         user_pass = password.getText().toString();
 
                         checkBoxRememberMe = findViewById(R.id.checkBox1);
-
+                        mFireBase.child("Users");
                         login();
 
                     }});
@@ -71,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     saveLoginDetails(user_email,user_pass);
 
                 }
+                AddToUsers();
                 startProfileActivity();
             }
             else
@@ -89,16 +96,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void ThankYou(){
-        Intent intent1 = new Intent(this,Homescreen.class);
-        startActivity(intent1);
-        finish();
-    }
 
     private void Home(){
         Intent intent2 = new Intent(this,Homescreen.class);
         startActivity(intent2);
         finish();
+    }
+
+    public void AddToUsers(){
+
+        mFireBase = FirebaseDatabase.getInstance().getReference().child("Users");
+        HashMap<String,String> datamap = new HashMap<String,String>();
+        datamap.put("Email",user_email);
+        datamap.put("Password",user_pass);
+
+        mFireBase.push().setValue(datamap);
     }
 
 }
