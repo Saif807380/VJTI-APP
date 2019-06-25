@@ -9,8 +9,8 @@ import android.widget.ImageButton;
 
 public class Homescreen extends AppCompatActivity {
 
-    ImageButton exit,events,map;
-
+    ImageButton exit,events,map,academics,upload,download;
+    String branch,year;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,9 @@ public class Homescreen extends AppCompatActivity {
         exit = findViewById(R.id.exit);
         events = findViewById(R.id.events);
         map = findViewById(R.id.map);
+        academics = findViewById(R.id.academics);
+        upload = findViewById(R.id.upload);
+        download = findViewById(R.id.download);
 
         events.setOnClickListener(
                 new ImageButton.OnClickListener(){
@@ -50,6 +53,35 @@ public class Homescreen extends AppCompatActivity {
                 }
         );
 
+        academics.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        branch = new GetStudentDetails().getBranch();
+                        year = new GetStudentDetails().getYear();
+                        startActivity(new Intent(Homescreen.this,Download.class));
+                    }
+                }
+        );
+
+        upload.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(Homescreen.this,Upload.class));
+                    }
+                }
+        );
+
+        download.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                }
+        );
+
     }
 
     private void event(){
@@ -64,4 +96,6 @@ public class Homescreen extends AppCompatActivity {
         startActivity(map_activity);
 
     }
+
+
 }

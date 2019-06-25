@@ -62,6 +62,7 @@ public class Profile extends AppCompatActivity implements OnItemSelectedListener
                     public void onClick(View v) {
                         user_name = name.getText().toString();
                         mFireBase.child("User's Profile");
+                        new GetStudentDetails().setDetails(branch_name,year_name);
                             AddToUsersProfile();
                             ThankYou();
 

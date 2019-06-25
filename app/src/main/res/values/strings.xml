@@ -49,6 +49,11 @@
     <string name="not_have_an_account_signup_here"> Do not have an account? Signup Here</string>
     <string name="signup">Sign In</string>
     <string name="enter_password1">Enter password</string>
+    <string name="upload">Upload</string>
+    <string name="download">Download</string>
+    <string name="browse_files">Browse Files</string>
+    <string name="no_file_selected">No file selected</string>
+    <string name="choose_subject">Choose Subject</string>
     <string-array name="branches">
         <item>Computer</item>
         <item>Electronics</item>
@@ -65,5 +70,30 @@
         <item>Second</item>
         <item>Third</item>
         <item>Final</item>
+    </string-array>
+    <string-array name="Coc">
+        <item>Facebook</item>
+        <item>Instagram</item>
+    </string-array>
+    <string-array name="Techno">
+        <item>Facebook</item>
+        <item>Instagram</item>
+    </string-array>
+    <string-array name="Prati">
+        <item>Facebook</item>
+        <item>Instagram</item>
+    </string-array>
+    <string-array name="Enthu">
+        <item>Facebook</item>
+        <item>Instagram</item>
+    </string-array>
+    <string-array name="Second_year_comps">
+        <item>Choose Subject</item>
+        <item>Maths</item>
+        <item>Discrete Maths</item>
+        <item>DLD</item>
+        <item>DS</item>
+        <item>JAVA</item>
+        <item>EVS</item>
     </string-array>
 </resources>

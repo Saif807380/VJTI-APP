@@ -7,7 +7,7 @@
     android:layout_margin="3dp"
     android:background="#00D31111"
     app:columnCount="2"
-    app:rowCount="2"
+    app:rowCount="6"
     app:useDefaultMargins="true">
 
     <ImageButton
@@ -103,6 +103,66 @@
         grid:layout_rowWeight="0" />
 
     <ImageButton
+        android:id="@+id/upload"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:background="@drawable/round"
+        android:padding="3dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/exit"
+        grid:layout_column="1"
+        grid:layout_columnWeight="1"
+        grid:layout_row="2"
+        grid:layout_rowWeight="1" />
+
+    <TextView
+        android:id="@+id/upload_title"
+        android:background="@drawable/shape5"
+        android:gravity="center"
+        android:text="@string/upload"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
+        grid:layout_column="1"
+        grid:layout_columnWeight="1"
+        grid:layout_row="3"
+        grid:layout_rowWeight="0" />
+
+    <ImageButton
+        android:id="@+id/download"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:background="@drawable/round"
+        android:padding="3dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/exit"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="4"
+        grid:layout_rowWeight="1" />
+
+    <TextView
+        android:id="@+id/download_title"
+        android:background="@drawable/shape5"
+        android:gravity="center"
+        android:text="@string/download"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        grid:fontFamily="cursive"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="5"
+        grid:layout_rowWeight="0" />
+
+    <ImageButton
         android:id="@+id/exit"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -115,7 +175,7 @@
         android:text="@string/coc"
         grid:layout_column="1"
         grid:layout_columnWeight="1"
-        grid:layout_row="2"
+        grid:layout_row="4"
         grid:layout_rowWeight="1" />
 
     <TextView
@@ -130,7 +190,7 @@
         grid:fontFamily="cursive"
         grid:layout_column="1"
         grid:layout_columnWeight="1"
-        grid:layout_row="3"
+        grid:layout_row="5"
         grid:layout_rowWeight="0" />
 
 </android.support.v7.widget.GridLayout>

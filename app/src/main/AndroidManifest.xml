@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +16,20 @@
         android:roundIcon="@mipmap/vjti_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Download" />
+        <activity android:name=".Upload" />
+        <activity
+            android:name=".Enthu"
+            android:label="@string/enthusia" />
+        <activity
+            android:name=".Prati"
+            android:label="@string/pratibimb" />
+        <activity
+            android:name=".Techno"
+            android:label="@string/technovanza" />
+        <activity
+            android:name=".COC"
+            android:label="@string/community_of_coders" />
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,9 +50,7 @@
             android:name=".Profile"
             android:label="@string/profile1" />
         <activity android:name=".ThankYou" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

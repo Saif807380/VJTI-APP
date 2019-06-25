@@ -23,11 +23,8 @@ public class Event extends AppCompatActivity {
                 new ImageButton.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        Intent coc = new Intent();
-                        coc.setAction(Intent.ACTION_VIEW);
-                        coc.addCategory(Intent.CATEGORY_BROWSABLE);
-                        coc.setData(Uri.parse("https://www.facebook.com/CommunityOfCoders/"));
-                        startActivity(coc);
+                        Intent coc_page = new Intent(Event.this,COC.class);
+                        startActivity(coc_page);
                     }
                 }
         );
@@ -36,11 +33,9 @@ public class Event extends AppCompatActivity {
                 new ImageButton.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        Intent techno = new Intent();
-                        techno.setAction(Intent.ACTION_VIEW);
-                        techno.addCategory(Intent.CATEGORY_BROWSABLE);
-                        techno.setData(Uri.parse("https://www.facebook.com/technovanza"));
-                        startActivity(techno);
+                        Intent techno_page = new Intent(Event.this,Techno.class);
+                        startActivity(techno_page);
+
                     }
                 }
         );
@@ -49,11 +44,8 @@ public class Event extends AppCompatActivity {
                 new ImageButton.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        Intent prati = new Intent();
-                        prati.setAction(Intent.ACTION_VIEW);
-                        prati.addCategory(Intent.CATEGORY_BROWSABLE);
-                        prati.setData(Uri.parse("https://www.facebook.com/pratibimbvjti"));
-                        startActivity(prati);
+                        Intent prati_page = new Intent(Event.this,Prati.class);
+                        startActivity(prati_page);
                     }
                 }
         );
@@ -63,11 +55,8 @@ public class Event extends AppCompatActivity {
                 new ImageButton.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        Intent enthu = new Intent();
-                        enthu.setAction(Intent.ACTION_VIEW);
-                        enthu.addCategory(Intent.CATEGORY_BROWSABLE);
-                        enthu.setData(Uri.parse("https://www.facebook.com/enthusia.vjti"));
-                        startActivity(enthu);
+                        Intent enthu_page = new Intent(Event.this,Enthu.class);
+                        startActivity(enthu_page);
                     }
                 }
         );
