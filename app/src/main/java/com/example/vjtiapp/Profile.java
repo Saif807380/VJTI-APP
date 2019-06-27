@@ -42,18 +42,18 @@ public class Profile extends AppCompatActivity implements OnItemSelectedListener
 
 
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
-                R.array.branches, android.R.layout.simple_spinner_item);
+                R.array.branches, R.layout.spinner_item);
 
 
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
-                R.array.year, android.R.layout.simple_spinner_item);
+                R.array.year, R.layout.spinner_item);
 
 
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         branch.setAdapter(adapter1);
         branch.setOnItemSelectedListener(this);
 
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         year.setAdapter(adapter2);
         year.setOnItemSelectedListener(this);
 
@@ -172,7 +172,6 @@ public class Profile extends AppCompatActivity implements OnItemSelectedListener
         datamap.put("Name",user_name);
         datamap.put("Branch",branch_name);
         datamap.put("Year",year_name);
-
         mFireBase.push().setValue(datamap);
     }
 }

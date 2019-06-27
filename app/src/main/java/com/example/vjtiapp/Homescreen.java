@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class Homescreen extends AppCompatActivity {
 
-    ImageButton exit,events,map,academics,upload,download;
+    Button profile,events,map,academics;
     String branch,year;
 
     @Override
@@ -17,15 +17,13 @@ public class Homescreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homescreen);
 
-        exit = findViewById(R.id.exit);
+        profile = findViewById(R.id.profile);
         events = findViewById(R.id.events);
         map = findViewById(R.id.map);
         academics = findViewById(R.id.academics);
-        upload = findViewById(R.id.upload);
-        download = findViewById(R.id.download);
 
         events.setOnClickListener(
-                new ImageButton.OnClickListener(){
+                new Button.OnClickListener(){
                     @Override
                     public void onClick(View v) {
                         event();
@@ -34,18 +32,18 @@ public class Homescreen extends AppCompatActivity {
         );
 
 
-        exit.setOnClickListener(
-                new ImageButton.OnClickListener(){
+        profile.setOnClickListener(
+                new Button.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        finish();
+                        startActivity(new Intent(Homescreen.this,EditProfile.class));
                     }
                 }
         );
 
 
         map.setOnClickListener(
-                new ImageButton.OnClickListener(){
+                new Button.OnClickListener(){
                     @Override
                     public void onClick(View v) {
                         map();
@@ -54,33 +52,16 @@ public class Homescreen extends AppCompatActivity {
         );
 
         academics.setOnClickListener(
-                new ImageButton.OnClickListener(){
+                new Button.OnClickListener(){
                     @Override
                     public void onClick(View v) {
                         branch = new GetStudentDetails().getBranch();
                         year = new GetStudentDetails().getYear();
-                        startActivity(new Intent(Homescreen.this,Download.class));
+                        startActivity(new Intent(Homescreen.this,FileManager.class));
                     }
                 }
         );
 
-        upload.setOnClickListener(
-                new ImageButton.OnClickListener(){
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(Homescreen.this,Upload.class));
-                    }
-                }
-        );
-
-        download.setOnClickListener(
-                new ImageButton.OnClickListener(){
-                    @Override
-                    public void onClick(View v) {
-
-                    }
-                }
-        );
 
     }
 

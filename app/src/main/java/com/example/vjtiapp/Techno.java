@@ -21,7 +21,7 @@ public class Techno extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_techno);
 
-        listView=(ListView)findViewById(R.id.listView);
+        listView=findViewById(R.id.listView);
         textView = findViewById(R.id.listTextView);
         listItem = getResources().getStringArray(R.array.Techno);
 

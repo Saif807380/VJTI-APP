@@ -24,7 +24,7 @@
     <string name="name">Name</string>
     <string name="branch">Branch</string>
     <string name="year">Year</string>
-    <string name="go_to_home">Go To Home</string>
+    <string name="go_to_home">Go To Home Screen</string>
     <string name="coc">coc</string>
     <string name="techno">techno</string>
     <string name="prati">prati</string>
@@ -45,7 +45,7 @@
     <string name="vjti_home">VJTI APP - HOME</string>
     <string name="already_registerd_sign_in_here">Already Registerd? Sign In here</string>
     <string name="user_login">User Login</string>
-    <string name="enter_email1">Enter email</string>
+    <string name="enter_email1">  Enter email</string>
     <string name="not_have_an_account_signup_here"> Do not have an account? Signup Here</string>
     <string name="signup">Sign In</string>
     <string name="enter_password1">Enter password</string>
@@ -54,6 +54,10 @@
     <string name="browse_files">Browse Files</string>
     <string name="no_file_selected">No file selected</string>
     <string name="choose_subject">Choose Subject</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="upload_files">Upload Files</string>
+    <string name="download_files">Download Files</string>
+    <string name="channel_name">notify</string>
     <string-array name="branches">
         <item>Computer</item>
         <item>Electronics</item>
@@ -88,7 +92,6 @@
         <item>Instagram</item>
     </string-array>
     <string-array name="Second_year_comps">
-        <item>Choose Subject</item>
         <item>Maths</item>
         <item>Discrete Maths</item>
         <item>DLD</item>
@@ -96,4 +99,9 @@
         <item>JAVA</item>
         <item>EVS</item>
     </string-array>
+
+    <string name="title_activity_admin">Admin</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="enter_admin_password">Enter Admin Password</string>
 </resources>

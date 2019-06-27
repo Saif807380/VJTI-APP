@@ -4,7 +4,7 @@ package com.example.vjtiapp;
 public class GetStudentDetails {
 
 
-    public String branch,year,path;
+    public String branch,year,path,key;
 
     public void setDetails(String b,String y){
         branch = b;

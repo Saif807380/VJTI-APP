@@ -25,6 +25,7 @@ public class PrefManager {
         boolean isPasswordEmpty = sharedPreferences.getString("Password", "").isEmpty();
         return (isEmailEmpty || isPasswordEmpty);
     }
+
 }
 
 
