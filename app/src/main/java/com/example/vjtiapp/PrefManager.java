@@ -26,6 +26,10 @@ public class PrefManager {
         return (isEmailEmpty || isPasswordEmpty);
     }
 
+    public void deleteSharedPreferences(){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
+        sharedPreferences.edit().clear().commit();
+    }
 }
 
 

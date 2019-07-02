@@ -83,4 +83,22 @@
         grid:layout_row="2"
         grid:layout_rowWeight="1" />
 
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_button"
+        android:padding="3dp"
+        android:text="@string/logout"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        grid:layout_column="0"
+        grid:layout_columnSpan="2"
+        grid:layout_gravity="center_horizontal"
+        grid:layout_row="3"
+        grid:layout_rowWeight="0" />
+
 </android.support.v7.widget.GridLayout>

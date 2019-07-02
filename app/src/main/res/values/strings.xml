@@ -58,6 +58,7 @@
     <string name="upload_files">Upload Files</string>
     <string name="download_files">Download Files</string>
     <string name="channel_name">notify</string>
+    <string name="logout">Logout</string>
     <string-array name="branches">
         <item>Computer</item>
         <item>Electronics</item>

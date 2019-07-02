@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class Homescreen extends AppCompatActivity {
 
-    Button profile,events,map,academics;
+    Button profile,events,map,academics,logout;
     String branch,year;
 
     @Override
@@ -21,7 +21,7 @@ public class Homescreen extends AppCompatActivity {
         events = findViewById(R.id.events);
         map = findViewById(R.id.map);
         academics = findViewById(R.id.academics);
-
+        logout = findViewById(R.id.logout);
         events.setOnClickListener(
                 new Button.OnClickListener(){
                     @Override
@@ -62,6 +62,16 @@ public class Homescreen extends AppCompatActivity {
                 }
         );
 
+        logout.setOnClickListener(
+                new Button.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        new PrefManager(Homescreen.this).deleteSharedPreferences();
+                        startActivity(new Intent(Homescreen.this,Login.class));
+                        finish();
+                    }
+                }
+        );
 
     }
 
