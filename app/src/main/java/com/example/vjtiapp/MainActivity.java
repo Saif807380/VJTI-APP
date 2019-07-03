@@ -86,13 +86,8 @@ public class MainActivity extends AppCompatActivity {
         {
             if(user_pass.length()>=8) {
 
-
-                if(checkBoxRememberMe.isChecked()){
                     saveLoginDetails(user_email,user_pass);
-
-                }
-
-                mAuth.createUserWithEmailAndPassword(user_email,user_pass)
+                    mAuth.createUserWithEmailAndPassword(user_email,user_pass)
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {

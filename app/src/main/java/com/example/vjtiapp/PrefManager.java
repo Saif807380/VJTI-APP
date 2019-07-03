@@ -30,6 +30,20 @@ public class PrefManager {
         SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
         sharedPreferences.edit().clear().commit();
     }
+
+    public String getSharedPreferencesEmail(){
+        String email;
+        SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails",Context.MODE_PRIVATE);
+        email = sharedPreferences.getString("Email",null);
+        return email;
+    }
+
+    public String  getSharedPreferencesPassword(){
+        String pass;
+        SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails",Context.MODE_PRIVATE);
+        pass = sharedPreferences.getString("Password",null);
+        return pass;
+    }
 }
 
 

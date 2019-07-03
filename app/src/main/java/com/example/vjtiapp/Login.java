@@ -24,7 +24,6 @@ public class Login extends AppCompatActivity {
     private EditText editTextEmail;
     private EditText editTextPassword;
     private TextView textViewSignup;
-    CheckBox checkBoxRememberMe;
 
     //firebase auth object
     private FirebaseAuth firebaseAuth;
@@ -56,6 +55,7 @@ public class Login extends AppCompatActivity {
                     public void onClick(View v) {
                         String email = editTextEmail.getText().toString().trim();
                         String password  = editTextPassword.getText().toString().trim();
+
                         //checking if email and passwords are empty
                         if(TextUtils.isEmpty(email)){
                             Toast.makeText(Login.this,"Please enter email",Toast.LENGTH_LONG).show();
@@ -67,13 +67,7 @@ public class Login extends AppCompatActivity {
                             return;
                         }
 
-                        checkBoxRememberMe = findViewById(R.id.checkBox2);
-                        //if the email and password are not empty
-                        if(checkBoxRememberMe.isChecked()){
-                            saveLoginDetails(email,password);
-
-                        }
-
+                        saveLoginDetails(email,password);
                         //logging in the user
                         firebaseAuth.signInWithEmailAndPassword(email, password)
                                 .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
@@ -85,6 +79,9 @@ public class Login extends AppCompatActivity {
                                             //start the profile activity
                                             finish();
                                             Home();
+                                        }
+                                        else{
+                                            Toast.makeText(Login.this,"Incorrect Password!",Toast.LENGTH_LONG).show();
                                         }
                                     }
                                 });
