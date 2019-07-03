@@ -77,6 +77,7 @@ public class Login extends AppCompatActivity {
                                         //if the task is successfull
                                         if(task.isSuccessful()){
                                             //start the profile activity
+                                            Toast.makeText(Login.this,"Logging in...",Toast.LENGTH_LONG).show();
                                             finish();
                                             Home();
                                         }
@@ -93,8 +94,9 @@ public class Login extends AppCompatActivity {
                 new TextView.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(Login.this,MainActivity.class));
                         finish();
+                        startActivity(new Intent(Login.this,MainActivity.class));
+
                     }
                 }
         );

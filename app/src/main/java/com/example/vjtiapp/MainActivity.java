@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     public String user_pass;
     Button createButton;
     TextView signIn;
-    CheckBox checkBoxRememberMe;
     private FirebaseAuth mAuth;
 
     @Override
@@ -52,9 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
                         user_email = email.getText().toString();
                         user_pass = password.getText().toString();
-
-                        checkBoxRememberMe = findViewById(R.id.checkBox1);
-
                         login();
 
                     }});
