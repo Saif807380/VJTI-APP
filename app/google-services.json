@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "88045629295",
+    "firebase_url": "https://vjtiapp-cfbb7.firebaseio.com",
+    "project_id": "vjtiapp-cfbb7",
+    "storage_bucket": "vjtiapp-cfbb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88045629295:android:6cd24d6bf9e70889",
+        "android_client_info": {
+          "package_name": "com.example.vjtiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88045629295-9del87o86j1a6r7v2ammuuli1kb11cip.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vjtiapp",
+            "certificate_hash": "a5ffb0b511df4e5653cd2973182c9e3584e4584b"
+          }
+        },
+        {
+          "client_id": "88045629295-s1rkqgffr13gd9f696e3d30kjvcqncv6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLgdqvuSAxpp2kD7S8pME-0evgiejqyIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88045629295-s1rkqgffr13gd9f696e3d30kjvcqncv6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
