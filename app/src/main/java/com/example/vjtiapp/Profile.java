@@ -62,7 +62,7 @@ public class Profile extends AppCompatActivity implements OnItemSelectedListener
                     public void onClick(View v) {
                         user_name = name.getText().toString();
                         mFireBase.child("User's Profile");
-                        new GetStudentDetails().setDetails(branch_name,year_name);
+                        new PrefManager(Profile.this).saveProfileDetails(user_name,branch_name,year_name);
                             AddToUsersProfile();
                             ThankYou();
 
@@ -167,12 +167,15 @@ public class Profile extends AppCompatActivity implements OnItemSelectedListener
 
     public void AddToUsersProfile(){
 
+
+
         mFireBase = FirebaseDatabase.getInstance().getReference().child("User's Profile");
         HashMap<String,String> datamap = new HashMap<String,String>();
         datamap.put("Name",user_name);
         datamap.put("Branch",branch_name);
         datamap.put("Year",year_name);
         mFireBase.push().setValue(datamap);
+
     }
 }
 

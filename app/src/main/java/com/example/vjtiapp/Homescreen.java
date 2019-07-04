@@ -60,7 +60,7 @@ public class Homescreen extends AppCompatActivity{
                 new Button.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(Homescreen.this,EditProfile.class));
+                        startActivity(new Intent(Homescreen.this,Display_Profile.class));
                     }
                 }
         );

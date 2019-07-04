@@ -34,6 +34,7 @@ public class EditProfile extends AppCompatActivity implements OnItemSelectedList
         save = findViewById(R.id.save);
         mFireBase = FirebaseDatabase.getInstance().getReference();
         name = findViewById(R.id.pro_name);
+        name.setText(new PrefManager(EditProfile.this).getName());
 
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
                 R.array.branches, R.layout.spinner_item);
@@ -59,9 +60,10 @@ public class EditProfile extends AppCompatActivity implements OnItemSelectedList
                         {
                             user_name = name.getText().toString();
                             mFireBase.child("User's Profile");
-                            new GetStudentDetails().setDetails(branch_name,year_name);
+                            new PrefManager(EditProfile.this).saveProfileDetails(user_name,branch_name,year_name);
                             AddToUsersProfile();
-                            startActivity(new Intent(EditProfile.this,Homescreen.class));
+                            finish();
+                            startActivity(new Intent(EditProfile.this,Display_Profile.class));
                         }
                         else{
                             Toast.makeText(EditProfile.this,"Please Enter Name",Toast.LENGTH_LONG).show();
@@ -161,7 +163,6 @@ public class EditProfile extends AppCompatActivity implements OnItemSelectedList
     }
 
     public void AddToUsersProfile(){
-
         mFireBase = FirebaseDatabase.getInstance().getReference().child("User's Profile");
         HashMap<String,String> datamap = new HashMap<String,String>();
         datamap.put("Name",user_name);
