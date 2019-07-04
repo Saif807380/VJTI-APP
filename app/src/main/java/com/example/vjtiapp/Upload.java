@@ -61,7 +61,7 @@ public class Upload extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
         sub = findViewById(R.id.choose_subject);
-        notificationHelper = new NotificationHelper(this);
+
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
                 R.array.Second_year_comps, R.layout.spinner_item);
 
@@ -222,6 +222,7 @@ public class Upload extends AppCompatActivity implements View.OnClickListener{
 
                         BasicUpload upload = new BasicUpload(editTextFilename.getText().toString(),url.toString());
                         mDatabaseReference.child(mDatabaseReference.push().getKey()).setValue(upload);
+                        notificationHelper = new NotificationHelper(Upload.this);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
