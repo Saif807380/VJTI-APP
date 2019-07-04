@@ -31,7 +31,6 @@ public class Display_Profile extends AppCompatActivity {
                 new Button.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        finish();
                         startActivity(new Intent(Display_Profile.this,EditProfile.class));
                     }
                 }
