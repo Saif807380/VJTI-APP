@@ -46,9 +46,6 @@ public class Upload extends AppCompatActivity implements View.OnClickListener{
     Spinner sub;
     String path;
     String  pos;
-    private static final String TAG = MainActivity.class.getSimpleName();
-    private static final int notification_one = 101;
-    private NotificationHelper notificationHelper;
 
 
 
@@ -125,30 +122,6 @@ public class Upload extends AppCompatActivity implements View.OnClickListener{
 
     }
 
-    public void postNotification(int id, String title) {
-        Notification.Builder notificationBuilder = null;
-        switch (id) {
-            case notification_one:
-                notificationBuilder = notificationHelper.getNotification1(title,
-                        "New file " + editTextFilename.getText().toString() + " uploaded to "+ pos);
-                break;
-
-        }
-
-        if (notificationBuilder != null) {
-            notificationHelper.notify(id, notificationBuilder);
-        }
-    }
-
-    //Load the settings screen for the selected notification channel//
-
-    public void goToNotificationSettings(String channel) {
-        Intent i = new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS);
-        i.putExtra(Settings.EXTRA_APP_PACKAGE, getPackageName());
-        i.putExtra(Settings.EXTRA_CHANNEL_ID, channel);
-        startActivity(i);
-    }
-
 
 
     @Override
@@ -214,7 +187,6 @@ public class Upload extends AppCompatActivity implements View.OnClickListener{
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                         textViewStatus.setText("File Uploaded Successfully");
-                        postNotification(notification_one,"New Upload");
 
                         Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
                         while(!uri.isComplete());
@@ -222,7 +194,6 @@ public class Upload extends AppCompatActivity implements View.OnClickListener{
 
                         BasicUpload upload = new BasicUpload(editTextFilename.getText().toString(),url.toString());
                         mDatabaseReference.child(mDatabaseReference.push().getKey()).setValue(upload);
-                        notificationHelper = new NotificationHelper(Upload.this);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

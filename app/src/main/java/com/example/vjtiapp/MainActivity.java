@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(MainActivity.this,"Successful!",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity.this,"Successful!",Toast.LENGTH_LONG).show();
                                 }
                             }
                         });

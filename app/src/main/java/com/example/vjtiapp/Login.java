@@ -77,7 +77,7 @@ public class Login extends AppCompatActivity {
                                         //if the task is successfull
                                         if(task.isSuccessful()){
                                             //start the profile activity
-                                            Toast.makeText(Login.this,"Logging in...",Toast.LENGTH_LONG).show();
+                                            Toast.makeText(Login.this,"Logging in...",Toast.LENGTH_SHORT).show();
                                             finish();
                                             Home();
                                         }
