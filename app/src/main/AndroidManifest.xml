@@ -17,7 +17,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Display_Profile"></activity>
+        <activity android:name=".Rang"
+            android:label="RANGAWARDHAN"></activity>
+        <activity android:name=".Racing"
+            android:label="VJTI RACING"/>
+        <activity android:name=".Aero"
+            android:label="AERO VJTI"/>
+        <activity android:name=".sra"
+            android:label="SRA"/>
+        <activity android:name=".Display_Profile" />
         <activity
             android:name=".Admin"
             android:label="UPLOAD" />
@@ -47,7 +55,7 @@
             android:label="@string/community_of_coders" />
         <activity
             android:name=".Login"
-            android:label="LOGIN"></activity>
+            android:label="LOGIN" />
         <activity
             android:name=".Map"
             android:label="@string/map1" />

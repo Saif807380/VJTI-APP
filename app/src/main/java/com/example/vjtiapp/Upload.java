@@ -90,8 +90,16 @@ public class Upload extends AppCompatActivity implements View.OnClickListener{
                         pos = "JAVA";
                         break;
                     case 5: path = Constants.STORAGE_SECOND_YEAR_COMPS_EVS;
-                        mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.STORAGE_SECOND_YEAR_COMPS_EVS);
+                        mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_SECOND_YEAR_COMPS_EVS);
                         pos = "EVS";
+                        break;
+                    case 6: path = Constants.STORAGE_SECOND_YEAR_COMPS_COA;
+                        mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_SECOND_YEAR_COMPS_COA);
+                        pos = "COA";
+                        break;
+                    case 7: path = Constants.STORAGE_SECOND_YEAR_COMPS_PYTHON;
+                        mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.STORAGE_SECOND_YEAR_COMPS_PYTHON);
+                        pos = "PYTHON";
                         break;
                 }
             }

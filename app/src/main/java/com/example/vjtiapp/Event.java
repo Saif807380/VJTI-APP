@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class Event extends AppCompatActivity  {
 
-    ImageButton coc,techno,prati,enthu;
+    ImageButton coc,techno,prati,enthu,sra,aero,racing,rang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,10 @@ public class Event extends AppCompatActivity  {
         techno = findViewById(R.id.techno);
         prati = findViewById(R.id.prati);
         enthu = findViewById(R.id.enthu);
+        sra = findViewById(R.id.sra);
+        rang = findViewById(R.id.rang);
+        racing = findViewById(R.id.racing);
+        aero = findViewById(R.id.aero);
 
         coc.setOnClickListener(
                 new ImageButton.OnClickListener(){
@@ -62,6 +66,45 @@ public class Event extends AppCompatActivity  {
                 }
         );
 
+        sra.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Intent sra = new Intent(Event.this,sra.class);
+                        startActivity(sra);
+                    }
+                }
+        );
+
+        aero.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Intent aero = new Intent(Event.this,Aero.class);
+                        startActivity(aero);
+                    }
+                }
+        );
+
+        racing.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Intent racing = new Intent(Event.this,Racing.class);
+                        startActivity(racing);
+                    }
+                }
+        );
+
+        rang.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Intent rang = new Intent(Event.this,Rang.class);
+                        startActivity(rang);
+                    }
+                }
+        );
     }
 
 }

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="0dp"
+    android:padding="5dp"
     android:background="#313030"
     app:columnCount="2"
     app:rowCount="2"
@@ -12,9 +13,9 @@
 
     <ImageButton
         android:id="@+id/coc"
-        android:layout_width="139dp"
+        android:layout_width="101dp"
         android:layout_height="50dp"
-        android:layout_margin="0dp"
+        android:layout_margin="5dp"
         android:background="@drawable/round"
         android:padding="0dp"
         android:scaleType="fitXY"
@@ -25,28 +26,14 @@
         grid:layout_row="0"
         grid:layout_rowWeight="1" />
 
-    <TextView
-        android:id="@+id/coc_title"
-        android:layout_margin="0dp"
-        android:background="#313030"
-        android:gravity="center"
-        android:text="@string/community_of_coders"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        grid:fontFamily="serif"
-        grid:layout_column="0"
-        grid:layout_columnWeight="1"
-        grid:layout_row="1"
-        grid:layout_rowWeight="0" />
 
     <ImageButton
         android:id="@+id/techno"
-        android:layout_width="64dp"
+        android:layout_width="101dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="false"
         android:layout_centerVertical="false"
-        android:layout_margin="0dp"
+        android:layout_margin="5dp"
         android:background="@drawable/round"
         android:padding="0dp"
         android:paddingLeft="3dp"
@@ -58,28 +45,13 @@
         grid:layout_row="0"
         grid:layout_rowWeight="1" />
 
-    <TextView
-        android:id="@+id/techno_title"
-        android:layout_margin="0dp"
-        android:background="#313030"
-        android:gravity="center"
-        android:text="@string/technovanza"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        grid:fontFamily="serif"
-        grid:layout_column="1"
-        grid:layout_columnWeight="1"
-        grid:layout_row="1"
-        grid:layout_rowWeight="0" />
-
     <ImageButton
         android:id="@+id/prati"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="false"
         android:layout_centerVertical="false"
-        android:layout_margin="0dp"
+        android:layout_margin="5dp"
         android:background="@drawable/round"
         android:padding="0dp"
         android:scaleType="fitXY"
@@ -90,28 +62,13 @@
         grid:layout_row="2"
         grid:layout_rowWeight="1" />
 
-    <TextView
-        android:id="@+id/prati_title"
-        android:layout_margin="0dp"
-        android:background="#313030"
-        android:gravity="center"
-        android:text="@string/pratibimb"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        grid:fontFamily="serif"
-        grid:layout_column="0"
-        grid:layout_columnWeight="1"
-        grid:layout_row="3"
-        grid:layout_rowWeight="0" />
-
     <ImageButton
         android:id="@+id/enthu"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="false"
         android:layout_centerVertical="false"
-        android:layout_margin="0dp"
+        android:layout_margin="5dp"
         android:background="@drawable/round"
         android:padding="0dp"
         android:scaleType="fitXY"
@@ -122,19 +79,73 @@
         grid:layout_row="2"
         grid:layout_rowWeight="1" />
 
-    <TextView
-        android:id="@+id/enthu_title"
-        android:layout_margin="0dp"
-        android:background="#313030"
-        android:gravity="center"
-        android:text="@string/enthusia"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        grid:fontFamily="serif"
+    <ImageButton
+        android:id="@+id/sra"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_margin="5dp"
+        android:background="@drawable/round"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/sra"
+        android:text="@string/coc"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="4"
+        grid:layout_rowWeight="1" />
+
+    <ImageButton
+        android:id="@+id/rang"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_margin="5dp"
+        android:background="@drawable/round"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rangwardhan"
+        android:text="@string/coc"
         grid:layout_column="1"
         grid:layout_columnWeight="1"
-        grid:layout_row="3"
-        grid:layout_rowWeight="0" />
+        grid:layout_row="6"
+        grid:layout_rowWeight="1" />
+
+    <ImageButton
+        android:id="@+id/racing"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_margin="5dp"
+        android:background="@drawable/round"
+        android:padding="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/racing"
+        android:text="@string/coc"
+        grid:layout_column="0"
+        grid:layout_columnWeight="1"
+        grid:layout_row="6"
+        grid:layout_rowWeight="1" />
+
+    <ImageButton
+        android:id="@+id/aero"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_margin="5dp"
+        android:background="@drawable/round"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/aero"
+        android:text="@string/coc"
+        grid:layout_column="1"
+        grid:layout_columnWeight="1"
+        grid:layout_row="4"
+        grid:layout_rowWeight="1" />
+
 
 </android.support.v7.widget.GridLayout>

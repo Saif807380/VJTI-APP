@@ -92,6 +92,10 @@
         <item>Facebook</item>
         <item>Instagram</item>
     </string-array>
+    <string-array name="aero">
+        <item>Facebook</item>
+        <item>Website</item>
+    </string-array>
     <string-array name="Second_year_comps">
         <item>Maths</item>
         <item>Discrete Maths</item>
@@ -99,6 +103,8 @@
         <item>DS</item>
         <item>JAVA</item>
         <item>EVS</item>
+        <item>COA</item>
+        <item>PYTHON</item>
     </string-array>
 
     <string name="title_activity_admin">Admin</string>
@@ -106,4 +112,8 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="enter_admin_password">Enter Admin Password</string>
     <string name="edit_profile">EDIT PROFILE</string>
+    <string name="s_r_a">S.R.A</string>
+    <string name="rangawardhan">Rangawardhan</string>
+    <string name="aero_vjti">Aero VJTI</string>
+    <string name="vjti_racing">VJTI Racing</string>
 </resources>
