@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
 
         if (!new PrefManager(this).isUserLogedOut()) {
             //user's email and password both are saved in preferences
-            Home();
+            startActivity(new Intent(Login.this,Homescreen.class));
         }
 
 
@@ -53,8 +53,8 @@ public class Login extends AppCompatActivity {
                 new Button.OnClickListener(){
                     @Override
                     public void onClick(View v) {
-                        String email = editTextEmail.getText().toString().trim();
-                        String password  = editTextPassword.getText().toString().trim();
+                        final String email = editTextEmail.getText().toString().trim();
+                        final String password  = editTextPassword.getText().toString().trim();
 
                         //checking if email and passwords are empty
                         if(TextUtils.isEmpty(email)){
@@ -67,7 +67,7 @@ public class Login extends AppCompatActivity {
                             return;
                         }
 
-                        saveLoginDetails(email,password);
+
                         //logging in the user
                         firebaseAuth.signInWithEmailAndPassword(email, password)
                                 .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
@@ -76,7 +76,9 @@ public class Login extends AppCompatActivity {
 
                                         //if the task is successfull
                                         if(task.isSuccessful()){
+
                                             //start the profile activity
+                                            saveLoginDetails(email,password);
                                             Toast.makeText(Login.this,"Logging in...",Toast.LENGTH_SHORT).show();
                                             finish();
                                             Home();

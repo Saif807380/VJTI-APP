@@ -146,8 +146,11 @@ public class Download extends AppCompatActivity {
             case 6: mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_SECOND_YEAR_COMPS_COA);
                 path = "COA";
                 break;
-            case 7: mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.STORAGE_SECOND_YEAR_COMPS_PYTHON);
+            case 7: mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_SECOND_YEAR_COMPS_PYTHON);
                 path = "PYTHON";
+                break;
+            case 8: mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_SECOND_YEAR_COMPS_OTHER);
+                path = "OTHER";
                 break;
         }
 

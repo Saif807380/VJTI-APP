@@ -66,11 +66,7 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-    private void startProfileActivity() {
-        Intent intent = new Intent(this, Profile.class);
-        startActivity(intent);
-        finish();
-    }
+
 
     private void saveLoginDetails(String email, String password) {
         new PrefManager(this).saveLoginDetails(email, password);
@@ -82,17 +78,26 @@ public class MainActivity extends AppCompatActivity {
         {
             if(user_pass.length()>=8) {
 
-                    saveLoginDetails(user_email,user_pass);
                     mAuth.createUserWithEmailAndPassword(user_email,user_pass)
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(MainActivity.this,"Successful!",Toast.LENGTH_LONG).show();
+                                    FirebaseAuth.getInstance().getCurrentUser().sendEmailVerification().
+                                            addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if(task.isSuccessful()){
+                                                        Toast.makeText(MainActivity.this,"Verification Email Sent!",Toast.LENGTH_LONG).show();
+                                                        startActivity(new Intent(MainActivity.this,Email_Verification.class));
+                                                        finish();
+                                                    }
+                                                }
+                                            });
                                 }
                             }
                         });
-                startProfileActivity();
+
             }
             else
             {
@@ -112,12 +117,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void Home(){
-        Intent intent2 = new Intent(this,Homescreen.class);
+        Intent intent2 = new Intent(MainActivity.this,Homescreen.class);
         startActivity(intent2);
         finish();
     }
 
-
+    private void startProfileActivity() {
+        Intent intent = new Intent(MainActivity.this, Login.class);
+        startActivity(intent);
+        finish();
+    }
 
 }
 

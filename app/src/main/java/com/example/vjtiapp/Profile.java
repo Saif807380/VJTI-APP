@@ -12,6 +12,7 @@ import android.widget.Toast;
 import android.widget.Button;
 import android.content.Intent;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -63,12 +64,9 @@ public class Profile extends AppCompatActivity implements OnItemSelectedListener
                         user_name = name.getText().toString();
                         mFireBase.child("User's Profile");
                         new PrefManager(Profile.this).saveProfileDetails(user_name,branch_name,year_name);
-                            AddToUsersProfile();
-                            ThankYou();
-
+                        AddToUsersProfile();
+                        ThankYou();
                     }});
-
-
     }
 
     @Override

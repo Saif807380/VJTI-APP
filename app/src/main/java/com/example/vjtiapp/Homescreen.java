@@ -36,7 +36,7 @@ public class Homescreen extends AppCompatActivity{
                 Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
 
-            Toast.makeText(Homescreen.this,"Please Allow All Permissions And Restart The App!",Toast.LENGTH_LONG).show();
+            Toast.makeText(Homescreen.this,"Please Allow All Permissions And Login Again!",Toast.LENGTH_LONG).show();
 
             Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
                     Uri.parse("package:" + getPackageName()));

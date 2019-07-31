@@ -105,6 +105,7 @@
         <item>EVS</item>
         <item>COA</item>
         <item>PYTHON</item>
+        <item>OTHER</item>
     </string-array>
 
     <string name="title_activity_admin">Admin</string>
@@ -112,8 +113,13 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="enter_admin_password">Enter Admin Password</string>
     <string name="edit_profile">EDIT PROFILE</string>
-    <string name="s_r_a">S.R.A</string>
-    <string name="rangawardhan">Rangawardhan</string>
     <string name="aero_vjti">Aero VJTI</string>
     <string name="vjti_racing">VJTI Racing</string>
+    <string name="c_o_c">C.O.C</string>
+    <string name="rangawardhan">Rangawardhan</string>
+    <string name="vjti_racing1">VJTI RACING</string>
+    <string name="aero_vjti1">AERO VJTI</string>
+    <string name="s_r_a">S.R.A</string>
+    <string name="d_l_a">D.L.A</string>
+    <string name="e_cell">E-CELL</string>
 </resources>
