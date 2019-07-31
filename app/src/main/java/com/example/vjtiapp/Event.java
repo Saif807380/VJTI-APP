@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class Event extends AppCompatActivity  {
 
-    ImageButton coc,techno,prati,enthu,sra,aero,racing,rang;
+    ImageButton coc,techno,prati,enthu,sra,aero,racing,rang,dla,ecell;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,8 @@ public class Event extends AppCompatActivity  {
         rang = findViewById(R.id.rang);
         racing = findViewById(R.id.racing);
         aero = findViewById(R.id.aero);
+        dla = findViewById(R.id.dla);
+        ecell = findViewById(R.id.ecell);
 
         coc.setOnClickListener(
                 new ImageButton.OnClickListener(){
@@ -105,6 +107,27 @@ public class Event extends AppCompatActivity  {
                     }
                 }
         );
+
+        dla.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Intent dla = new Intent(Event.this,Dla.class);
+                        startActivity(dla);
+                    }
+                }
+        );
+
+        ecell.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Intent ecell = new Intent(Event.this,Ecell.class);
+                        startActivity(ecell);
+                    }
+                }
+        );
+
     }
 
 }
