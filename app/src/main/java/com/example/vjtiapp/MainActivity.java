@@ -122,11 +122,6 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    private void startProfileActivity() {
-        Intent intent = new Intent(MainActivity.this, Login.class);
-        startActivity(intent);
-        finish();
-    }
 
 }
 
